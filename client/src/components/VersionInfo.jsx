@@ -16,8 +16,8 @@ const VersionInfo = () => {
       return window.location.origin;
     }
     
-    // Desenvolvimento local - inferir porta 8080
-    return 'http://localhost:8080';
+    // Usar o mesmo host e porta da aplicação atual
+    return window.location.origin;
   };
 
   const checkApiHealth = async () => {
