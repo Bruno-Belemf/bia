@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 # Copiar package.json raiz primeiro
 COPY package*.json ./
-RUN npm install --loglevel=error
+RUN npm install --legacy-peer-deps --loglevel=error
 
 # Copiar package.json do client e instalar dependências (incluindo devDependencies para build)
 COPY client/package*.json ./client/
